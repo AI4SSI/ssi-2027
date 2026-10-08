@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scientific Super Intelligence (SSI) — a workshop at ICLR 2027, San Francisco.">
+    <meta name="theme-color" content="#2c5282">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Scientific Super Intelligence @ ICLR 2027">
+    <meta property="og:description" content="A workshop at ICLR 2027 on AI systems that can drive scientific discovery at and beyond the level of the best human scientists.">
+    <meta property="og:image" content="images/Basic/hero.svg">
+    <title>SSI@ICLR2027 Workshop</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/Basic/logo.svg">
+    <link rel="apple-touch-icon" href="images/Basic/logo.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (Play CDN, pinned version) -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 4.5rem; /* keep section titles clear of the sticky nav */
+        }
+
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            color: #1a202c;
+            background-color: #f7fafc;
+        }
+
+        /* Header: background image + dark overlay (same approach as AIMS@ICLR2026) */
+        #main-header {
+            background-color: #14306a;
+            background-image: url('images/Basic/hero.svg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 8rem 0 6rem;
+        }
+
+        #main-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+
+        #main-header .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-container {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Person grids (speakers / organizers) */
+        .person-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .person-grid.speakers-grid-lg {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .person-grid.organizers-grid-lg {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .person-grid.speakers-grid-lg {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        /* Collapsible sections: hide default <details> marker */
+        .collapsible-section summary::-webkit-details-marker { display: none; }
+        .collapsible-section summary::marker { content: none; }
+        .collapsible-section[open] .expand-hint { display: none; }
+    </style>
+</head>
+
+<body id="page-top" class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 bg-white shadow-lg" aria-label="Main">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand (Logo + Text) -->
+                <div class="flex-shrink-0 flex items-center min-w-0">
+                    <a href="#page-top" class="flex items-center gap-3 min-w-0">
+                        <img class="h-10 w-10" src="images/Basic/logo.svg" alt="" width="40" height="40">
+                        <span class="text-xl sm:text-2xl font-extrabold text-[#2c5282] tracking-tight truncate">SSI@ICLR2027</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden xl:block">
+                    <div class="ml-8 flex items-baseline space-x-1">
+                        <a href="#news" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">News</a>
+                        <a href="#introduction" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">About</a>
+                        <a href="#call" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">CFP</a>
+                        <a href="#accepted-papers" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Accepted Papers</a>
+                        <a href="#program-committee" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Program Committee</a>
+                        <a href="#program" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Schedule</a>
+                        <a href="#speaker" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Speakers</a>
+                        <a href="#organization" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Organizers</a>
+                        <a href="#sponsor" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Sponsors</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex xl:hidden">
+                    <button type="button" id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden xl:hidden bg-white border-t" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#news" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">News</a>
+                <a href="#introduction" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#call" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Call for Papers</a>
+                <a href="#accepted-papers" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Accepted Papers</a>
+                <a href="#program-committee" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Program Committee</a>
+                <a href="#program" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Schedule</a>
+                <a href="#speaker" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Invited Speakers</a>
+                <a href="#organization" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Organizers</a>
+                <a href="#sponsor" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Sponsors</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="main-header" class="text-white text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center justify-center space-y-4">
+
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                    Scientific Super Intelligence
+                </h1>
+
+                <div class="bg-blue-800 bg-opacity-70 backdrop-blur-sm px-4 py-4 rounded-lg shadow-xl my-2">
+                    <h2 class="text-lg sm:text-xl font-medium tracking-wider uppercase">ICLR 2027 Workshop</h2>
+                </div>
+
+                <!-- CONTENT:tagline -->
+                <p class="max-w-3xl text-lg sm:text-xl font-light text-blue-50" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
+                    Toward AI systems that drive scientific discovery at, and beyond, the frontier of human expertise.
+                </p>
+                <!-- /CONTENT:tagline -->
+
+                <p class="text-base sm:text-lg font-medium text-blue-100">
+                    April 2027 &middot; San Francisco, California
+                    <span class="block sm:inline text-sm text-blue-200">(exact date and room to be announced)</span>
+                </p>
+
+                <div class="pt-2 flex flex-wrap justify-center gap-3">
+                    <a href="#call" class="inline-block bg-white text-[#2c5282] font-bold py-2 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-100 ring-2 ring-blue-500">
+                        Call for Papers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+    <!-- News Section -->
+    <section id="news" class="section-container py-12">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">News</h2>
+            <div class="text-gray-700">
+                <ul class="list-disc pl-6 space-y-3 sm:space-y-4">
+                    <!-- Add newest items at the top. -->
+                    <li>
+                        <span class="font-bold text-sm sm:text-base">[Oct 2026] Workshop Proposal Submitted</span>: The Scientific Super Intelligence workshop has been proposed to ICLR 2027. Acceptance decisions are expected on <strong>November 29, 2026</strong>.
+                    </li>
+                    <li>
+                        <span class="font-bold text-sm sm:text-base">[Oct 2026] Website Launched</span>: Welcome to the official website of SSI@ICLR2027.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="section-container py-12 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">About</h2>
+            <!-- CONTENT:about -->
+            <div class="text-lg text-gray-700 leading-relaxed space-y-4 text-left hyphens-auto">
+                <p>ABOUT PARAGRAPH 1</p>
+                <p>ABOUT PARAGRAPH 2</p>
+                <p>ABOUT PARAGRAPH 3</p>
+            </div>
+            <!-- /CONTENT:about -->
+
+            <!-- CONTENT:questions -->
+            <div class="mt-10 p-6 bg-blue-50/60 border border-blue-100 rounded-xl">
+                <h3 class="text-xl font-bold text-[#2c5282] mb-4">Key Questions</h3>
+                <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+                    <li>QUESTION 1</li>
+                </ol>
+            </div>
+            <!-- /CONTENT:questions -->
+        </div>
+    </section>
+
+    <!-- Call for Papers Section -->
+    <section id="call" class="section-container py-12">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">Call for Papers</h2>
+
+            <div class="text-lg text-gray-700 leading-relaxed text-left hyphens-auto space-y-6">
+                <!-- CONTENT:cfp-intro -->
+                <p>CFP INTRO</p>
+                <!-- /CONTENT:cfp-intro -->
+
+                <!-- Key Dates -->
+                <div class="mt-8">
+                    <h3 class="text-2xl font-bold text-[#2c5282] border-b-2 border-blue-200 pb-2 mb-4">Key Dates <span class="text-base font-normal text-gray-500">(tentative)</span></h3>
+                    <ul class="list-none space-y-2">
+                        <li><span class="font-bold">Submission Open:</span> December 15, 2026</li>
+                        <li><span class="font-bold">Submission Deadline:</span> January 30, 2027</li>
+                        <li><span class="font-bold">Notification of Acceptance:</span> February 24, 2027</li>
+                        <li><span class="font-bold">Camera-Ready Paper Due:</span> March 12, 2027</li>
+                        <li><span class="font-bold">Workshop Date:</span> April 29 or 30, 2027 (to be confirmed by ICLR)</li>
+                    </ul>
+                    <p class="mt-4 text-sm italic">
+                        All deadlines are 23:59 <span class="text-blue-600">Anywhere on Earth (AoE)</span>.
+                    </p>
+                </div>
+
+                <!-- Submission Site -->
+                <div class="mt-8">
+                    <h3 class="text-2xl font-bold text-[#2c5282] border-b-2 border-blue-200 pb-2 mb-4">Submission Site</h3>
+                    <p>
+                        Papers will be submitted through <span class="font-medium text-red-600">OpenReview</span>. The submission link will be posted here when the portal opens.
+                    </p>
+                </div>
+
+                <!-- Scope -->
+                <div id="scope" class="mt-8">
+                    <h3 class="text-2xl font-bold text-[#2c5282] border-b-2 border-blue-200 pb-2 mb-4">Scope</h3>
+                    <p class="mb-6">Topics of interest include, but are not limited to:</p>
+                    <!-- CONTENT:scope -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                            <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">CARD</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-base text-gray-600">
+                                <li>BULLET</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /CONTENT:scope -->
+                </div>
+
+                <!-- Submission Guidelines -->
+                <div class="mt-8">
+                    <h3 class="text-2xl font-bold text-[#2c5282] border-b-2 border-blue-200 pb-2 mb-4">Submission Guidelines</h3>
+
+                    <p class="font-bold">Format:</p>
+                    <p class="ml-4">All submissions must be a single PDF file. We welcome high-quality original work in the following two tracks. References and appendices do not count toward the page limit, but the main text must be self-contained; reviewers are not required to read beyond it.</p>
+                    <ul class="list-disc pl-6 space-y-1 ml-8 mt-2">
+                        <li>
+                            <span class="font-bold">Full Papers:</span> Up to 9 pages (excluding references) for novel methods, theoretical results, empirical studies, systems, benchmarks, or position papers on the path toward scientific super intelligence.
+                        </li>
+                        <li>
+                            <span class="font-bold">Tiny Papers:</span> Up to 4 pages (excluding references) for early-stage ideas, simple implementations, modest theoretical results, follow-up experiments, negative results, or fresh perspectives on existing work.
+                        </li>
+                    </ul>
+
+                    <div class="relative mt-10 mb-6 border-2 border-blue-100 bg-blue-50/30 rounded-lg p-6">
+                        <div class="absolute -top-3 left-4 bg-[#2c5282] text-white text-xs font-bold px-3 py-1 rounded shadow-sm">
+                            ICLR Official
+                        </div>
+                        <p class="text-gray-700 leading-relaxed text-sm italic">
+                            In line with the ICLR 2027 workshop guidelines, our Tiny Papers track prioritizes &ldquo;less-than-full-conference&rdquo; contributions and aims to broaden participation, especially from early-career researchers and authors outside the usual ML publication circuit. AI assistance is permitted, but Tiny Papers must be <strong>primarily human-authored</strong>; AI-generated papers are not allowed in this track. Authors of accepted papers may apply for ICLR 2027 Financial Assistance; see <a href="https://iclr.cc/Conferences/2027" class="text-blue-600 underline hover:text-blue-800">iclr.cc/Conferences/2027</a> for details.
+                        </p>
+                    </div>
+
+                    <p class="font-bold mt-4">Style file:</p>
+                    <p class="ml-4">Please format your submission using the official <a href="https://github.com/ICLR/Master-Template/tree/master/iclr2027" class="text-blue-600 hover:text-blue-800 underline">ICLR 2027 LaTeX template</a>. Include references and supplementary material in the same PDF. Submissions that alter the ICLR style (e.g., by decreasing margins or font sizes) or exceed the page limits may be rejected without review.</p>
+
+                    <p class="font-bold mt-4">Dual-submission and non-archival policy:</p>
+                    <p class="ml-4">We welcome ongoing and unpublished work. We will also consider papers that are under review elsewhere, provided this does not violate the dual-submission or anonymity policies of those venues. Since the workshop is meant to showcase new work, papers already published at a major ML venue (including the ICLR 2027 main conference) should not be submitted. The workshop is <strong>non-archival</strong> and will not have formal proceedings; accepted papers can be subsequently or concurrently submitted to other venues.</p>
+
+                    <p class="font-bold mt-4">Visibility:</p>
+                    <p class="ml-4">Submissions and reviews will not be public. Only accepted papers will be made public on OpenReview.</p>
+
+                    <p class="font-bold mt-4">Double-blind reviewing:</p>
+                    <p class="ml-4">All submissions must be anonymized and may not contain any identifying information that violates the double-blind reviewing policy. This applies to supplementary and linked material as well, including code; if you link to external material, you are responsible for ensuring anonymous browsing. Please do not include acknowledgements at submission time, and cite your own prior work in the third person. Papers that violate this policy will be desk-rejected.</p>
+
+                    <p class="font-bold mt-4">Use of AI tools:</p>
+                    <p class="ml-4">Authors and reviewers must follow the ICLR 2027 policies on AI use (<a href="https://iclr.cc/Conferences/2027/AIPolicyForAuthors" class="text-blue-600 hover:text-blue-800 underline">authors</a>, <a href="https://iclr.cc/Conferences/2027/AIPolicyForReviewers" class="text-blue-600 hover:text-blue-800 underline">reviewers</a>). Authors are fully responsible for the content of their submissions and must disclose their use of large language models as required by the ICLR 2027 policy.</p>
+
+                    <p class="font-bold mt-4">Presentation:</p>
+                    <p class="ml-4">ICLR 2027 workshops are held in person. All accepted papers will be presented as posters, and a selection will be invited for oral or spotlight talks. At least one author of each accepted paper is expected to attend; if no author can travel (e.g., due to visa issues), we will accommodate the paper with a pre-recorded video and a displayed poster.</p>
+
+                    <p class="font-bold mt-4">Oral and Best Paper Awards:</p>
+                    <p class="ml-4">We plan to select several papers for contributed oral talks and a set of Tiny Papers for short spotlight talks. We will present a Best Paper Award, a Best Tiny Paper Award, and a Best Poster Award decided by on-site voting.</p>
+
+                    <p class="font-bold mt-4">Contact:</p>
+                    <!-- TODO: replace with the workshop's contact email -->
+                    <p class="ml-4">For any questions, please contact us at <a href="mailto:ssi.iclr2027@example.com" class="underline font-medium">ssi.iclr2027@example.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accepted Papers Section (collapsible) -->
+    <section id="accepted-papers" class="section-container py-12">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <details class="collapsible-section">
+                <summary class="text-3xl font-extrabold text-center text-[#2c5282] mb-8 cursor-pointer list-none flex flex-wrap justify-center items-center gap-2">
+                    Accepted Papers
+                    <span class="expand-hint text-lg text-gray-500 font-normal">(click to expand)</span>
+                </summary>
+                <div class="text-gray-700 mt-4 text-center">
+                    <p>Accepted papers will be listed here after the review period (by February 26, 2027).</p>
+                    <!--
+                    Template for each paper:
+                    <li class="border-b border-gray-200 pb-3 text-left">
+                        <div><a href="https://openreview.net/forum?id=XXXX" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-700 hover:text-blue-900 hover:underline">Paper Title</a>
+                        <span class="inline-block rounded-full px-2.5 py-0.5 ml-1.5 text-xs font-bold bg-red-100 text-red-800 border border-red-300">Oral</span>
+                        <span class="inline-block rounded-full px-2.5 py-0.5 ml-1.5 text-xs font-semibold bg-slate-200 text-slate-700 border border-slate-300">Full Paper</span></div>
+                        <span class="text-sm text-gray-600">Author One, Author Two</span>
+                    </li>
+                    -->
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Program Committee Section (collapsible) -->
+    <section id="program-committee" class="section-container py-12 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <details class="collapsible-section">
+                <summary class="text-3xl font-extrabold text-center text-[#2c5282] mb-8 cursor-pointer list-none flex flex-wrap justify-center items-center gap-2">
+                    Program Committee
+                    <span class="expand-hint text-lg text-gray-500 font-normal">(click to expand)</span>
+                </summary>
+                <div class="text-gray-700 mt-4 text-center">
+                    <p class="mb-2">The program committee will be announced soon.</p>
+                    <p class="text-sm text-gray-500">Interested in reviewing for SSI@ICLR2027? We especially welcome reviewers from the natural sciences and mathematics. Please contact us at the email address above.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="program" class="section-container py-12 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">Schedule</h2>
+            <p class="text-center text-gray-500 italic mb-8">This is the tentative schedule of the workshop. All times are in local time (PDT).</p>
+
+            <div class="overflow-x-auto rounded-lg shadow-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="bg-gray-50">
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">8:50 – 9:00</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Opening Remarks</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900">9:00 – 9:30</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited Talk 1</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900">9:30 – 10:00</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited Talk 2</td>
+                        </tr>
+                        <tr class="bg-blue-100">
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-blue-800">10:00 – 10:30</td>
+                            <td class="px-4 sm:px-6 py-4 text-blue-800 font-semibold">Coffee Break</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900">10:30 – 11:15</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">
+                                Contributed Oral Presentations<br>
+                                <span class="text-sm italic">(3 talks, 15 min each including Q&amp;A)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900">11:15 – 11:45</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited Talk 3</td>
+                        </tr>
+                        <tr class="bg-green-50">
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-green-800">11:45 – 12:30</td>
+                            <td class="px-4 sm:px-6 py-4 text-green-800 font-semibold">Poster Session I</td>
+                        </tr>
+                        <tr class="bg-blue-50">
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-blue-800">12:30 – 13:30</td>
+                            <td class="px-4 sm:px-6 py-4 text-blue-800 font-semibold">Lunch Break</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900">13:30 – 14:00</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited Talk 4</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900">14:00 – 14:30</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited Talk 5</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900">14:30 – 15:00</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">
+                                Tiny Paper Spotlights<br>
+                                <span class="text-sm italic">(6 talks, 5 min each)</span>
+                            </td>
+                        </tr>
+                        <tr class="bg-blue-100">
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-blue-800">15:00 – 15:30</td>
+                            <td class="px-4 sm:px-6 py-4 text-blue-800 font-semibold">Coffee Break</td>
+                        </tr>
+                        <tr class="bg-amber-50">
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-amber-800">15:30 – 16:30</td>
+                            <td class="px-4 sm:px-6 py-4 text-amber-800">
+                                <span class="font-semibold">Panel Discussion</span><br>
+                                <span class="text-sm italic">PANEL TOPIC</span>
+                            </td>
+                        </tr>
+                        <tr class="bg-green-50">
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-green-800">16:30 – 17:20</td>
+                            <td class="px-4 sm:px-6 py-4 text-green-800 font-semibold">Poster Session II</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900">17:20 – 17:30</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Best Paper Awards &amp; Closing Remarks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invited Speakers Section -->
+    <section id="speaker" class="section-container py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-3">Invited Speakers</h2>
+            <p class="text-center text-gray-500 italic mb-10">Speakers and talk titles will be announced soon.</p>
+
+            <!--
+            To add a speaker: put a square photo in images/Speakers/ and copy one card below.
+            Replace the image path, homepage link, name and affiliation.
+            -->
+            <div class="person-grid speakers-grid-lg max-w-6xl mx-auto">
+                <!-- Speaker 1 -->
+                <div class="flex flex-col items-center p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Speaker to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-xl font-semibold text-gray-800">To Be Announced</h4>
+                    <p class="text-sm text-gray-500">Affiliation</p>
+                </div>
+                <!-- Speaker 2 -->
+                <div class="flex flex-col items-center p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Speaker to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-xl font-semibold text-gray-800">To Be Announced</h4>
+                    <p class="text-sm text-gray-500">Affiliation</p>
+                </div>
+                <!-- Speaker 3 -->
+                <div class="flex flex-col items-center p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Speaker to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-xl font-semibold text-gray-800">To Be Announced</h4>
+                    <p class="text-sm text-gray-500">Affiliation</p>
+                </div>
+                <!-- Speaker 4 -->
+                <div class="flex flex-col items-center p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Speaker to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-xl font-semibold text-gray-800">To Be Announced</h4>
+                    <p class="text-sm text-gray-500">Affiliation</p>
+                </div>
+                <!-- Speaker 5 -->
+                <div class="flex flex-col items-center p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Speaker to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-xl font-semibold text-gray-800">To Be Announced</h4>
+                    <p class="text-sm text-gray-500">Affiliation</p>
+                </div>
+                <!-- Speaker 6 -->
+                <div class="flex flex-col items-center p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Speaker to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-xl font-semibold text-gray-800">To Be Announced</h4>
+                    <p class="text-sm text-gray-500">Affiliation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Organizers Section -->
+    <section id="organization" class="section-container py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-10">Workshop Organizers</h2>
+
+            <!--
+            To add an organizer: put a square photo in images/Organizers/ and edit one card below.
+            ICLR 2027 allows at most 8 organizers per workshop.
+            Card template:
+            <div class="flex flex-col items-center p-3 text-center">
+                <img src="images/Organizers/First Last.jpg" alt="First Last" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                <a href="https://homepage.example" class="text-lg font-semibold text-gray-800 hover:text-blue-600 transition duration-150"><h4>First Last</h4></a>
+                <p class="text-xs text-gray-500">Affiliation</p>
+            </div>
+            -->
+            <div class="person-grid organizers-grid-lg max-w-5xl mx-auto">
+                <!-- Organizer 1 -->
+                <div class="flex flex-col items-center p-3 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Organizer to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-lg font-semibold text-gray-800">Organizer Name</h4>
+                    <p class="text-xs text-gray-500">Affiliation</p>
+                </div>
+                <!-- Organizer 2 -->
+                <div class="flex flex-col items-center p-3 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Organizer to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-lg font-semibold text-gray-800">Organizer Name</h4>
+                    <p class="text-xs text-gray-500">Affiliation</p>
+                </div>
+                <!-- Organizer 3 -->
+                <div class="flex flex-col items-center p-3 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Organizer to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-lg font-semibold text-gray-800">Organizer Name</h4>
+                    <p class="text-xs text-gray-500">Affiliation</p>
+                </div>
+                <!-- Organizer 4 -->
+                <div class="flex flex-col items-center p-3 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Organizer to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-lg font-semibold text-gray-800">Organizer Name</h4>
+                    <p class="text-xs text-gray-500">Affiliation</p>
+                </div>
+                <!-- Organizer 5 -->
+                <div class="flex flex-col items-center p-3 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Organizer to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-lg font-semibold text-gray-800">Organizer Name</h4>
+                    <p class="text-xs text-gray-500">Affiliation</p>
+                </div>
+                <!-- Organizer 6 -->
+                <div class="flex flex-col items-center p-3 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Organizer to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-lg font-semibold text-gray-800">Organizer Name</h4>
+                    <p class="text-xs text-gray-500">Affiliation</p>
+                </div>
+                <!-- Organizer 7 -->
+                <div class="flex flex-col items-center p-3 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Organizer to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-lg font-semibold text-gray-800">Organizer Name</h4>
+                    <p class="text-xs text-gray-500">Affiliation</p>
+                </div>
+                <!-- Organizer 8 -->
+                <div class="flex flex-col items-center p-3 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="Organizer to be announced" class="w-36 h-36 rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h4 class="text-lg font-semibold text-gray-800">Organizer Name</h4>
+                    <p class="text-xs text-gray-500">Affiliation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsor" class="section-container py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-6">Sponsors</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto">
+                Interested in supporting SSI@ICLR2027 (e.g., travel awards for students and early-career researchers, or best paper awards)? Please reach out to us at <a href="mailto:ssi.iclr2027@example.com" class="underline font-medium text-[#2c5282]">ssi.iclr2027@example.com</a>.
+            </p>
+            <!--
+            Sponsor card template:
+            <div class="flex flex-wrap justify-center gap-12 max-w-4xl mx-auto mt-8">
+                <div class="flex flex-col items-center p-4">
+                    <img src="images/Basic/sponsor-logo.png" alt="Sponsor Name" class="w-40 h-40 object-contain rounded-xl p-4">
+                    <p class="text-lg font-medium text-gray-600 mt-2">Sponsor Name</p>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+        <p class="text-sm">Copyright &copy; 2026 SSI@ICLR2027 Workshop. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu: toggle on button click, close after choosing a link.
+        (function () {
+            var button = document.getElementById('mobile-menu-button');
+            var menu = document.getElementById('mobile-menu');
+            function setOpen(open) {
+                menu.classList.toggle('hidden', !open);
+                button.setAttribute('aria-expanded', String(open));
+            }
+            button.addEventListener('click', function () {
+                setOpen(menu.classList.contains('hidden'));
+            });
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () { setOpen(false); });
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
