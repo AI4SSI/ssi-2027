@@ -83,13 +83,26 @@
             justify-items: center;
         }
 
+        /* Centered rows (used for panelists, so a short last row stays centered) */
+        .person-grid.person-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .person-grid.person-flex > div {
+            flex: 0 0 calc(50% - 12px);
+        }
+
         @media (min-width: 768px) {
             .person-grid.speakers-grid-lg {
                 grid-template-columns: repeat(3, 1fr);
             }
-            .person-grid.organizers-grid-lg,
-            .person-grid.panelists-grid-lg {
+            .person-grid.organizers-grid-lg {
                 grid-template-columns: repeat(4, 1fr);
+            }
+            .person-grid.person-flex > div {
+                flex-basis: calc(25% - 18px);
             }
         }
 
@@ -603,7 +616,7 @@
     <section id="panelists" class="section-container py-12 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-3">Panelists</h2>
-            <p class="text-center text-gray-500 italic mb-10 text-balance">Panelists and the panel topic will be announced soon.</p>
+            <p class="text-center text-gray-500 italic mb-10 text-balance">The panel topic will be announced soon.</p>
 
             <!--
             To add a panelist: put a square photo in images/Panelists/ and replace one placeholder card below.
@@ -611,34 +624,52 @@
             Card template:
             <div class="flex flex-col items-center p-4 text-center">
                 <img src="images/Panelists/first-last.jpg" alt="First Last" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                <h3 class="text-xl font-semibold"><a href="https://homepage.example" class="text-gray-800 hover:text-blue-600 transition duration-150">First Last</a></h3>
+                <h3 class="text-lg sm:text-xl font-semibold"><a href="https://homepage.example" class="text-gray-800 hover:text-blue-600 transition duration-150">First Last</a></h3>
                 <p class="text-sm text-gray-500">Affiliation</p>
             </div>
             -->
-            <div class="person-grid panelists-grid-lg max-w-5xl mx-auto">
+            <div class="person-grid person-flex max-w-5xl mx-auto">
                 <!-- Panelist 1 -->
                 <div class="flex flex-col items-center p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
-                    <p class="text-sm text-gray-500">Affiliation</p>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Hongteng Xu</h3>
+                    <p class="text-sm text-gray-500">Renmin University of China</p>
                 </div>
                 <!-- Panelist 2 -->
                 <div class="flex flex-col items-center p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
-                    <p class="text-sm text-gray-500">Affiliation</p>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Chen Cai</h3>
+                    <p class="text-sm text-gray-500">Google</p>
                 </div>
                 <!-- Panelist 3 -->
                 <div class="flex flex-col items-center p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
-                    <p class="text-sm text-gray-500">Affiliation</p>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Xuewei Wang</h3>
+                    <p class="text-sm text-gray-500">Meta</p>
                 </div>
                 <!-- Panelist 4 -->
                 <div class="flex flex-col items-center p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
-                    <p class="text-sm text-gray-500">Affiliation</p>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Ivory Zhang</h3>
+                    <p class="text-sm text-gray-500">University of British Columbia</p>
+                </div>
+                <!-- Panelist 5 -->
+                <div class="flex flex-col items-center p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Yuanhao Zhou</h3>
+                    <p class="text-sm text-gray-500">Carnegie Mellon University</p>
+                </div>
+                <!-- Panelist 6 -->
+                <div class="flex flex-col items-center p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Zhidi Lin</h3>
+                    <p class="text-sm text-gray-500">The Education University of Hong Kong</p>
+                </div>
+                <!-- Panelist 7 -->
+                <div class="flex flex-col items-center p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Yuxing Wang</h3>
+                    <p class="text-sm text-gray-500">NVIDIA</p>
                 </div>
             </div>
         </div>
@@ -664,50 +695,50 @@
                 <!-- Organizer 1 -->
                 <div class="flex flex-col items-center p-3 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-lg font-semibold text-gray-800">Organizer Name</h3>
-                    <p class="text-xs text-gray-500">Affiliation</p>
+                    <h3 class="text-lg font-semibold text-gray-800">Tanghang Tong</h3>
+                    <p class="text-xs text-gray-500">University of Illinois Urbana-Champaign</p>
                 </div>
                 <!-- Organizer 2 -->
                 <div class="flex flex-col items-center p-3 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-lg font-semibold text-gray-800">Organizer Name</h3>
-                    <p class="text-xs text-gray-500">Affiliation</p>
+                    <h3 class="text-lg font-semibold text-gray-800">Ricky Renjie Li</h3>
+                    <p class="text-xs text-gray-500">University of Illinois Urbana-Champaign</p>
                 </div>
                 <!-- Organizer 3 -->
                 <div class="flex flex-col items-center p-3 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-lg font-semibold text-gray-800">Organizer Name</h3>
-                    <p class="text-xs text-gray-500">Affiliation</p>
+                    <h3 class="text-lg font-semibold text-gray-800">Tianshu Yu</h3>
+                    <p class="text-xs text-gray-500">The Chinese University of Hong Kong, Shenzhen</p>
                 </div>
                 <!-- Organizer 4 -->
                 <div class="flex flex-col items-center p-3 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-lg font-semibold text-gray-800">Organizer Name</h3>
-                    <p class="text-xs text-gray-500">Affiliation</p>
+                    <h3 class="text-lg font-semibold text-gray-800">Jiawei Zhang</h3>
+                    <p class="text-xs text-gray-500">University of Wisconsin&ndash;Madison</p>
                 </div>
                 <!-- Organizer 5 -->
                 <div class="flex flex-col items-center p-3 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-lg font-semibold text-gray-800">Organizer Name</h3>
-                    <p class="text-xs text-gray-500">Affiliation</p>
+                    <h3 class="text-lg font-semibold text-gray-800">Zhen Li</h3>
+                    <p class="text-xs text-gray-500">The Chinese University of Hong Kong, Shenzhen</p>
                 </div>
                 <!-- Organizer 6 -->
                 <div class="flex flex-col items-center p-3 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-lg font-semibold text-gray-800">Organizer Name</h3>
-                    <p class="text-xs text-gray-500">Affiliation</p>
+                    <h3 class="text-lg font-semibold text-gray-800">Chudi Zhong</h3>
+                    <p class="text-xs text-gray-500">University of North Carolina at Chapel Hill</p>
                 </div>
                 <!-- Organizer 7 -->
                 <div class="flex flex-col items-center p-3 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-lg font-semibold text-gray-800">Organizer Name</h3>
-                    <p class="text-xs text-gray-500">Affiliation</p>
+                    <h3 class="text-lg font-semibold text-gray-800">Shangding Gu</h3>
+                    <p class="text-xs text-gray-500">Shanghai Jiao Tong University</p>
                 </div>
                 <!-- Organizer 8 -->
                 <div class="flex flex-col items-center p-3 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-lg font-semibold text-gray-800">Organizer Name</h3>
-                    <p class="text-xs text-gray-500">Affiliation</p>
+                    <h3 class="text-lg font-semibold text-gray-800">Ge Liu</h3>
+                    <p class="text-xs text-gray-500">University of Illinois Urbana-Champaign</p>
                 </div>
             </div>
         </div>
