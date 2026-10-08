@@ -32,7 +32,7 @@ Then open <http://localhost:8027>.
 | Key dates / submission link | `<section id="call">` → *Key Dates*, *Submission Site* |
 | Speakers | `<section id="speaker">`, one card per person (template in the comment) |
 | Organizers | `<section id="organization">`, one card per person (max. 8 for ICLR 2027) |
-| Schedule | `<section id="program">` table |
+| Schedule | `<section id="program">`: currently a "To Be Announced" placeholder; a full-day table template is kept in an HTML comment right below it |
 | Accepted papers / PC | `<section id="accepted-papers">`, `<section id="program-committee">` |
 | Contact email | search for `ssi.iclr2027@example.com` |
 
