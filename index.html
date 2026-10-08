@@ -83,7 +83,7 @@
             justify-items: center;
         }
 
-        /* Centered rows (used for panelists, so a short last row stays centered) */
+        /* Centered rows (speakers, panelists), so a short last row stays centered */
         .person-grid.person-flex {
             display: flex;
             flex-wrap: wrap;
@@ -95,9 +95,6 @@
         }
 
         @media (min-width: 768px) {
-            .person-grid.speakers-grid-lg {
-                grid-template-columns: repeat(3, 1fr);
-            }
             .person-grid.organizers-grid-lg {
                 grid-template-columns: repeat(4, 1fr);
             }
@@ -580,7 +577,7 @@
     <section id="speaker" class="section-container py-12">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-3">Invited Speakers</h2>
-            <p class="text-center text-gray-500 italic mb-10 text-balance">Speakers and talk titles will be announced soon.</p>
+            <p class="text-center text-gray-500 italic mb-10 text-balance">Additional speakers and talk titles will be announced soon.</p>
 
             <!--
             To add a speaker: put a square photo in images/Speakers/ and replace one placeholder card below.
@@ -592,41 +589,29 @@
                 <p class="text-sm text-gray-500">Affiliation</p>
             </div>
             -->
-            <div class="person-grid speakers-grid-lg max-w-6xl mx-auto">
+            <div class="person-grid person-flex max-w-5xl mx-auto">
                 <!-- Speaker 1 -->
                 <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
-                    <p class="text-sm text-gray-500">Affiliation</p>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Wei Zhou</h3>
+                    <p class="text-sm text-gray-500">Associate Professor<br>Virginia Tech</p>
                 </div>
                 <!-- Speaker 2 -->
                 <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
-                    <p class="text-sm text-gray-500">Affiliation</p>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Guannan Zhang</h3>
+                    <p class="text-sm text-gray-500">Distinguished Staff Scientist<br>Oak Ridge National Laboratory</p>
                 </div>
                 <!-- Speaker 3 -->
                 <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">To Be Announced</h3>
                     <p class="text-sm text-gray-500">Affiliation</p>
                 </div>
                 <!-- Speaker 4 -->
                 <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
-                    <p class="text-sm text-gray-500">Affiliation</p>
-                </div>
-                <!-- Speaker 5 -->
-                <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
-                    <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
-                    <p class="text-sm text-gray-500">Affiliation</p>
-                </div>
-                <!-- Speaker 6 -->
-                <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
-                    <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
-                    <h3 class="text-xl font-semibold text-gray-800">To Be Announced</h3>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">To Be Announced</h3>
                     <p class="text-sm text-gray-500">Affiliation</p>
                 </div>
             </div>
