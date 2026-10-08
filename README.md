@@ -1,4 +1,4 @@
-# SSI@ICLR2027 — Scientific Super Intelligence Workshop Website
+# SSI@ICLR2027 — Scientific Superintelligence Workshop Website
 
 Static, single-page website for the **Scientific Super Intelligence** workshop proposed to ICLR 2027.
 Its layout follows the [AIMS@ICLR2026](https://alimama-tech.github.io/aims-2026/) workshop site
