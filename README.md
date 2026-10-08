@@ -8,7 +8,8 @@ Its layout follows the [AIMS@ICLR2026](https://alimama-tech.github.io/aims-2026/
 
 ```
 index.html                  # the whole site (all sections)
-images/Basic/logo.svg       # logo + favicon
+images/Basic/logo.svg       # logo + favicon (PNG versions: favicon-32.png, apple-touch-icon.png)
+images/Basic/og-image.png   # 1200×630 link-preview image
 images/Basic/hero.svg       # header background
 images/Basic/avatar-placeholder.svg
 images/Speakers/            # speaker photos (square, ≥ 300×300 px recommended)
@@ -33,12 +34,13 @@ Then open <http://localhost:8027>.
 | Key dates / submission link | `<section id="call">` → *Key Dates*, *Submission Site* |
 | Speakers | `<section id="speaker">`, one card per person (template in the comment) |
 | Panelists | `<section id="panelists">`, one card per person (template in the comment) |
-| Organizers | `<section id="organization">`, one card per person (max. 8 for ICLR 2027) |
+| Organizers | `<section id="organization">`, one card per person (max. 8 for ICLR 2027, advisors and student volunteers included) |
 | Schedule | `<section id="program">`: currently a "To Be Announced" placeholder; a full-day table template is kept in an HTML comment right below it |
 | Accepted papers / PC | `<section id="accepted-papers">`, `<section id="program-committee">` |
 | Contact email | search for `ssi.iclr2027@example.com` |
 
 Photos: put the file in `images/Speakers/`, `images/Panelists/` or `images/Organizers/` and point the card's `<img src>` to it.
+GitHub Pages paths are case-sensitive, so prefer lowercase file names such as `jane-doe.jpg`.
 
 ## Deploy on GitHub Pages
 
