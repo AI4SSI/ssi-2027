@@ -164,11 +164,9 @@
                     <h2 class="text-lg sm:text-xl font-medium tracking-wider uppercase">ICLR 2027 Workshop</h2>
                 </div>
 
-                <!-- CONTENT:tagline -->
-                <p class="max-w-3xl text-lg sm:text-xl font-light text-blue-50" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
-                    Toward AI systems that drive scientific discovery at, and beyond, the frontier of human expertise.
+                <p class="max-w-3xl text-lg sm:text-xl font-light text-blue-50 text-balance" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
+                    What would it take for AI to exceed the best human scientists, and how would we know?
                 </p>
-                <!-- /CONTENT:tagline -->
 
                 <p class="text-base sm:text-lg font-medium text-blue-100">
                     April 2027 &middot; San Francisco, California
@@ -208,22 +206,28 @@
     <section id="introduction" class="section-container py-12 bg-white">
         <div class="container mx-auto px-4 max-w-5xl">
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">About</h2>
-            <!-- CONTENT:about -->
             <div class="text-lg text-gray-700 leading-relaxed space-y-4 text-left hyphens-auto">
-                <p>ABOUT PARAGRAPH 1</p>
-                <p>ABOUT PARAGRAPH 2</p>
-                <p>ABOUT PARAGRAPH 3</p>
+                <p>
+                    We treat scientific super intelligence (SSI) as an operational target, not a slogan or forecast: AI systems that match and then exceed the best human scientists, given the same tasks, time, and resources, across the research loop (reading the literature, forming hypotheses, designing and running experiments, analyzing results, proving and verifying claims, and communicating findings). Exceeding these scientists means asking better questions, finding what they miss, and justifying results so others can check them. Measuring this, stage by stage and end to end, is part of our agenda.
+                </p>
+                <p>
+                    Why now, and why ICLR? AI systems already search the literature, propose molecules and materials, steer automated labs, and produce machine-checkable proofs, but mostly one step at a time. Claims of AI-driven discovery also outpace our ability to check them: benchmarks saturate or leak into training data, and novelty is hard to establish. Many open bottlenecks are core ICLR problems, such as learning from costly experimental feedback, test-time reasoning, calibrated world models, tool-using agents, evaluation, and oversight; others lie in data, instruments, and the pace of physical experiments.
+                </p>
+                <p>
+                    This proposed one-day, in-person ICLR 2027 workshop brings together machine learning (ML) researchers, domain scientists, builders of self-driving labs, and researchers in evaluation, safety, and science policy, including skeptics of the SSI framing. Contributed talks, posters, and a Tiny Papers track feature new work; a panel discussion and long discussion blocks take up what counts as a discovery and how to verify it; an open-problems session pairs domain scientists with ML researchers. We especially welcome under-represented, under-resourced, and early-career researchers. Papers, posters, and recordings will be posted online.
+                </p>
             </div>
-            <!-- /CONTENT:about -->
 
-            <!-- CONTENT:questions -->
             <div class="mt-10 p-6 bg-blue-50/60 border border-blue-100 rounded-xl">
                 <h3 class="text-xl font-bold text-[#2c5282] mb-4">Key Questions</h3>
                 <ol class="list-decimal pl-6 space-y-2 text-gray-700">
-                    <li>QUESTION 1</li>
+                    <li>What evidence should convince us that an AI-produced result is new, correct, and significant, rather than retrieved from training data?</li>
+                    <li>Which learning signals can close the research loop when experimental feedback is costly, noisy, and delayed, and where do experiments and data, not reasoning, limit progress?</li>
+                    <li>What would a fair, resource-matched comparison with the best human scientists look like, and does superhuman performance transfer across fields or stay narrow?</li>
+                    <li>How can we verify AI-generated claims that no single expert can fully check: formal proof, replication, prospective prediction, or something new?</li>
+                    <li>How should credit, peer review, and human oversight change as AI does more of the research, and which dual-use safeguards must precede expert-level autonomy?</li>
                 </ol>
             </div>
-            <!-- /CONTENT:questions -->
         </div>
     </section>
 
@@ -233,9 +237,9 @@
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">Call for Papers</h2>
 
             <div class="text-lg text-gray-700 leading-relaxed text-left hyphens-auto space-y-6">
-                <!-- CONTENT:cfp-intro -->
-                <p>CFP INTRO</p>
-                <!-- /CONTENT:cfp-intro -->
+                <p>
+                    We invite submissions on AI systems that carry out science across the research loop. We value work on how much of the loop such systems close, how they compare with the best human scientists under matched conditions, how to check their claims, and how to deploy them safely. Replications and negative results are welcome. We encourage submissions from machine learning, AI safety, formal methods, lab automation, biology, chemistry, materials science, physics, mathematics, climate science, science policy, and philosophy of science.
+                </p>
 
                 <!-- Key Dates -->
                 <div class="mt-8">
@@ -264,16 +268,67 @@
                 <div id="scope" class="mt-8">
                     <h3 class="text-2xl font-bold text-[#2c5282] border-b-2 border-blue-200 pb-2 mb-4">Scope</h3>
                     <p class="mb-6">Topics of interest include, but are not limited to:</p>
-                    <!-- CONTENT:scope -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">CARD</h4>
-                            <ul class="list-disc pl-5 space-y-1 text-base text-gray-600">
-                                <li>BULLET</li>
-                            </ul>
-                        </div>
+                    <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">Representations, Reasoning &amp; World Models</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-base text-gray-600">
+                            <li>Foundation models over text, sequences, structures, spectra, and images: when scale yields cross-field transfer and when specialization wins.</li>
+                            <li>Symmetry-aware representations and learned simulators that stay calibrated and flag out-of-distribution queries, where new discoveries tend to lie.</li>
+                            <li>Test-time search over hypotheses, synthesis routes, and proof steps, guided by learned value functions and verifiers.</li>
+                            <li>Data for discovery: sim-to-real gaps, synthetic data, and machine-readable experimental records, including failed experiments.</li>
+                            <li>Allocating fixed budgets across reasoning, simulation, and physical experiments, and identifying where experimental throughput, not compute, limits progress.</li>
+                        </ul>
                     </div>
-                    <!-- /CONTENT:scope -->
+                    <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">AI Scientists &amp; Self-Driving Labs</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-base text-gray-600">
+                            <li>Literature agents that map evidence, contradictions, and untested predictions across fields, with every claim traceable to a source.</li>
+                            <li>Problem selection and hypothesis generation, with measures of novelty and significance that go beyond surface similarity to prior work.</li>
+                            <li>Learning to experiment: Bayesian optimization, active learning, and reinforcement learning from verifiable rewards and costly, noisy, and delayed lab outcomes.</li>
+                            <li>Long-horizon agents that run code, call solvers and instruments, and recover from failed runs and instrument drift over multi-week campaigns.</li>
+                            <li>Analysis and reporting: agents whose write-ups state uncertainty and limitations faithfully and can be checked against the underlying data.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">Evaluation, Verification &amp; Reproducibility</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-base text-gray-600">
+                            <li>Contamination-resistant and prospective evaluation: post-cutoff findings, held-out experimental data, unsolved problems, and predictions registered before experiments are run.</li>
+                            <li>Testing claims of surpassing the best human scientists: baselines matched on task, time, cost, and information, with expert disagreement measured.</li>
+                            <li>Verifiable artifacts: autoformalized statements, machine-checked proofs, certificates for derivations and analyses, and provenance for code, data, prompts, and lab logs.</li>
+                            <li>Independent replication of claimed AI discoveries, and detection of p-hacking, data leakage, and fabricated citations.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">Humans &amp; the Scientific Ecosystem</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-base text-gray-600">
+                            <li>Interfaces and explanations that let scientists steer, critique, and override AI proposals, favoring mechanisms and derivations experts can check.</li>
+                            <li>Interpretability as a route to discovery: extracting testable scientific knowledge from what trained models have learned.</li>
+                            <li>Human understanding: over-reliance, deskilling, and the narrowing of scientific judgment when AI results outpace what scientists can follow.</li>
+                            <li>What counts as a discovery or explanation, and how credit, authorship, and peer review adapt to AI-generated papers at scale.</li>
+                            <li>Equitable access to models, compute, data, and lab automation for under-resourced groups.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">Safety, Dual Use &amp; Governance</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-base text-gray-600">
+                            <li>Dangerous-capability evaluations of AI agents for biology and chemistry, including uplift studies and red-teaming.</li>
+                            <li>Safeguards for self-driving labs: action constraints, human sign-off, monitoring, audit trails, and who decides when to relax them.</li>
+                            <li>Reward hacking and specification gaming when agents optimize proxy metrics or simulator scores.</li>
+                            <li>Scalable oversight of scientific reasoning that exceeds the expertise of human evaluators.</li>
+                            <li>Release policies for scientific models and responsible disclosure of hazardous findings.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">Discovery Across the Sciences</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-base text-gray-600">
+                            <li>Mathematics: conjecture generation, counterexample search, and formal theorem proving at the research level.</li>
+                            <li>Life sciences: protein design, genomic analysis, and mechanistic hypotheses tested in pre-registered wet-lab experiments.</li>
+                            <li>Chemistry and materials science: catalysts, battery materials, polymers, and small molecules carried through synthesis and characterization, not just computed properties.</li>
+                            <li>Physics and climate science: equation discovery, PDE surrogates, and climate emulators tested outside their training regimes.</li>
+                            <li>Machine learning itself: agents that reproduce papers, run ablations, and test new methods; a cheap, checkable testbed with safety implications.</li>
+                        </ul>
+                    </div>
+                    </div>
                 </div>
 
                 <!-- Submission Guidelines -->
@@ -375,7 +430,7 @@
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">Schedule</h2>
             <div class="max-w-2xl mx-auto text-center p-8 bg-gray-50 border border-dashed border-gray-300 rounded-xl">
                 <p class="text-lg font-semibold text-gray-700">To Be Announced</p>
-                <p class="mt-2 text-gray-500">The detailed schedule will be posted closer to the workshop. The workshop will be a full-day, in-person event with invited talks, contributed talks, poster sessions, and a panel discussion.</p>
+                <p class="mt-2 text-gray-500">The detailed schedule will be posted closer to the workshop. The workshop will be a full-day, in-person event with invited talks, contributed talks, Tiny Paper spotlights, poster sessions, and a panel discussion.</p>
             </div>
 
             <!--
