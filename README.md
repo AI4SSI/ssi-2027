@@ -44,6 +44,9 @@ GitHub Pages paths are case-sensitive, so prefer lowercase file names such as `j
 
 ## Deploy on GitHub Pages
 
-1. Push this folder to a GitHub repository (e.g. `ssi-2027`).
-2. Repository **Settings → Pages → Build and deployment**: *Deploy from a branch*, branch `main`, folder `/ (root)`.
-3. The site will be available at `https://<github-user>.github.io/<repo>/` within a minute or two.
+The site is hosted from [`AI4SSI/ssi-2027`](https://github.com/AI4SSI/ssi-2027) at
+<https://ai4ssi.github.io/ssi-2027/> (**Settings → Pages**: *Deploy from a branch*, `main`, `/ (root)`).
+Every push to `main` is live within a minute or two.
+
+If the repository is renamed or moved, update the absolute URLs in `index.html`
+(`og:url`, `og:image`, `canonical`). The URL path is case-sensitive and must match the repository name.
