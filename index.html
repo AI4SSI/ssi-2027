@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="1st Workshop on Scientific Superintelligence (SSI), a workshop proposed to ICLR 2027, San Francisco.">
+    <meta name="description" content="1st Workshop on Scientific Superintelligence (SSI): Evidence, Expert Baselines, and Recursive Improvement. A workshop proposed to ICLR 2027, San Francisco.">
     <meta name="theme-color" content="#2c5282">
     <meta property="og:type" content="website">
     <meta property="og:title" content="1st Workshop on Scientific Superintelligence @ ICLR 2027">
-    <meta property="og:description" content="A proposed ICLR 2027 workshop asking how AI discovery systems can generate new, independently verifiable scientific knowledge and improve their ability to discover it.">
+    <meta property="og:description" content="A proposed ICLR 2027 workshop on evidence, expert baselines, and recursive improvement: when does an AI discovery system outperform expert scientists, and when does its next version become a better discoverer?">
     <meta property="og:url" content="https://ai4ssi.github.io/ssi-2027/">
     <meta property="og:site_name" content="SSI@ICLR2027">
     <meta property="og:image" content="https://ai4ssi.github.io/ssi-2027/images/Basic/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="1st Workshop on Scientific Superintelligence, ICLR 2027 Workshop Proposal, San Francisco, April 2027">
+    <meta property="og:image:alt" content="1st Workshop on Scientific Superintelligence, ICLR 2027 Workshop Proposal, San Francisco, April 29&ndash;30, 2027">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://ai4ssi.github.io/ssi-2027/">
     <title>SSI@ICLR2027 | 1st Workshop on Scientific Superintelligence</title>
@@ -92,6 +92,12 @@
 
         .person-grid.person-flex > div {
             flex: 0 0 calc(50% - 12px);
+        }
+
+        @media (min-width: 1024px) {
+            .person-grid.person-flex.speakers-5 > div {
+                flex-basis: calc(20% - 19.2px);
+            }
         }
 
         @media (min-width: 768px) {
@@ -181,18 +187,19 @@
                     <span class="block text-2xl sm:text-4xl font-bold text-blue-100 mb-2">1st Workshop on</span>
                     <span class="block text-3xl min-[360px]:text-4xl sm:text-6xl">Scientific Superintelligence</span>
                 </h1>
+                <p class="text-lg sm:text-2xl font-semibold text-blue-50 text-balance" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Evidence, Expert Baselines, and Recursive Improvement</p>
 
                 <div class="bg-blue-800 bg-opacity-70 backdrop-blur-sm px-3 sm:px-4 py-3 sm:py-4 rounded-lg shadow-xl my-2 max-w-full">
                     <p class="text-sm min-[360px]:text-base sm:text-xl font-medium tracking-wide sm:tracking-wider uppercase whitespace-nowrap">ICLR 2027 Workshop Proposal</p>
                 </div>
 
                 <p class="max-w-3xl text-lg sm:text-xl font-light text-blue-50 text-balance" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
-                    How can AI discovery systems generate new, independently verifiable scientific knowledge and improve their ability to discover it?
+                    When does an AI discovery system outperform expert scientists, and when does its next version become a better discoverer?
                 </p>
 
                 <p class="text-base sm:text-lg font-medium text-blue-100">
-                    April 2027 &middot; San Francisco, California
-                    <span class="block sm:inline text-sm text-blue-200">(exact date and room to be announced)</span>
+                    April 29&ndash;30, 2027 &middot; San Francisco, California
+                    <span class="block sm:inline text-sm text-blue-200">(exact day and room to be announced)</span>
                 </p>
 
                 <div class="pt-2 flex flex-wrap justify-center gap-3">
@@ -214,6 +221,9 @@
                 <ul class="list-disc pl-6 space-y-3 sm:space-y-4">
                     <!-- Add newest items at the top. -->
                     <li>
+                        <span class="font-bold">[Oct 2026] Invited Speakers Confirmed</span>: Wei Zhou, Guannan Zhang, Haotian Zhang, Jian Tang, and Shuchao Bi have confirmed attendance.
+                    </li>
+                    <li>
                         <span class="font-bold">[Oct 2026] Workshop Proposal Submitted</span>: The 1st Workshop on Scientific Superintelligence has been proposed to ICLR 2027. Acceptance decisions are expected on <strong>November 29, 2026</strong>.
                     </li>
                     <li>
@@ -230,24 +240,21 @@
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">About</h2>
             <div class="text-lg text-gray-700 leading-relaxed space-y-4 text-left">
                 <p>
-                    Scientific AI is moving from predicting properties and answering questions toward systems that formulate hypotheses, construct models and instruments, design experiments, and learn from their results. The <em>1st Workshop on Scientific Superintelligence</em> will bring together machine learning researchers and scientific practitioners to examine the algorithms, representations, and evidence needed for this transition. Its central question is: <em>How can AI discovery systems generate new, independently verifiable scientific knowledge and improve their ability to discover it?</em>
+                    When does an AI discovery system outperform expert scientists, and when does its next version become a better discoverer? The <em>1st Workshop on Scientific Superintelligence</em> will turn these ambitions into two testable questions: <strong>comparative capability at matched resources</strong> and <strong>recursive improvement under fixed external evaluation</strong>. Scientific superintelligence is the hypothesis being examined: superior performance must be tied to explicit tasks, credible expert-team and algorithmic baselines, and independently checked outcomes.
                 </p>
                 <p>
-                    We use <em>scientific superintelligence</em> as a research ambition: systems that could surpass expert human teams on clearly specified scientific discovery tasks while producing reliable, transferable, and understandable results. Establishing such capability requires explicit baselines, resource accounting, and external validation; it cannot be inferred from fluent explanations or isolated benchmark scores.
+                    AI4Sci, AI4Mat, AI4Chem, AI4Math, AI4Physics, AI4AI, and self-driving laboratories provide test settings for these questions. Comparisons will account for compute, laboratory access, elapsed time, and human effort, and distinguish scientific novelty, task completion, and transferable capability. Studies of individual representations, feedback-learning methods, or evaluators are welcome when they inform either question.
                 </p>
                 <p>
-                    The workshop spans AI for Science (AI4Sci), materials (AI4Mat), chemistry (AI4Chem), mathematics (AI4Math), physics (AI4Physics), AI research itself (AI4AI), and self-driving laboratories. These domains share a discovery loop but differ in what counts as evidence. Four invited talks, contributed presentations, two poster sessions, an evidence clinic, and structured discussions will develop a common evaluation framework, benchmark concepts, and a community research agenda.
+                    Five invited talks, contributed presentations, posters, an evidence clinic, two focused panels, and working groups will produce one primary artifact: <strong>a reporting template for comparative capability claims with three worked examples</strong>. Physical experiments, formal proof, and computational/AI research will share comparison fields while retaining their own verification standards. The workshop will sharpen protocols and expose failure modes that researchers can study after the meeting.
                 </p>
             </div>
 
-            <div class="mt-10 p-6 bg-blue-50/60 border border-blue-100 rounded-xl">
-                <h3 class="text-xl font-bold text-[#2c5282] mb-4">Key Questions</h3>
+            <div id="pillars" class="mt-10 p-6 bg-blue-50/60 border border-blue-100 rounded-xl">
+                <h3 class="text-xl font-bold text-[#2c5282] mb-4">Two Pillars: Comparative Capability and Recursive Improvement</h3>
                 <ol class="list-decimal pl-6 space-y-3 text-gray-700">
-                    <li><strong>Representations for discovery.</strong> How should systems encode hypotheses, mechanisms, constraints, uncertainty, and experimental history so that they can reason across modalities and revise a mistaken premise? We will compare symbolic, geometric, graph-based, and learned representations on concrete discovery tasks.</li>
-                    <li><strong>Learning from interventions.</strong> How can active learning and reinforcement learning choose experiments that distinguish explanations rather than merely optimize a proxy? The workshop will contrast information gain, objective improvement, experiment cost, and robustness to delayed or noisy feedback.</li>
-                    <li><strong>Verified novelty and capability.</strong> What constitutes a discovery rather than retrieval, recombination, or benchmark leakage? Participants will specify temporal splits, expert-team and algorithmic baselines, independent checks, and accounting for compute, laboratory access, human intervention, and unsuccessful trials. Formal proof, predictive simulation, and experimental replication will be treated as distinct evidence types.</li>
-                    <li><strong>Recursive tool and model improvement.</strong> Can agents construct better simulators, instruments, abstractions, or evaluators, then demonstrate better discovery with them? Proposed improvements must be tested against fixed external criteria so that modifying an evaluator cannot manufacture apparent progress.</li>
-                    <li><strong>Understanding and responsible autonomy.</strong> How can machine-scale exploration yield compact mechanisms humans can test and use? We will examine provenance, calibrated uncertainty, human oversight, safe experiment boundaries, and access for researchers with limited compute or laboratory resources.</li>
+                    <li><strong>Beyond-expert claims at matched resources.</strong> What task and comparator would make a claim of exceeding expert performance meaningful? We seek expert-team, human&ndash;AI-team, and algorithmic baselines with documented expertise and information access. Comparisons should specify compute, experiment capacity, elapsed and human time, stopping rules, and independent outcomes. Where resources cannot be exactly matched, cost&ndash;performance curves and explicit differences are preferable to an unqualified superiority claim. Temporal splits and provenance checks should separate new discovery from retrieval, leakage, and selective reporting.</li>
+                    <li><strong>Recursive improvement under fixed external evaluation.</strong> Which changes to models, representations, memory, tools, or policies improve discovery beyond an earlier version and a static baseline? We welcome RL, active learning, generative modeling, optimization, and agents learning from scarce, noisy, delayed, and negative feedback. Studies should freeze external criteria, separate adaptation from held-out assessment, account for update costs, and check regression and transfer. The external evaluator may itself be imperfect: its uncertainty and failure modes should be assessed independently of the system it scores. Evaluator modification or higher self-scores alone do not establish better discovery.</li>
                 </ol>
             </div>
         </div>
@@ -263,7 +270,7 @@
                     This call is provisional and takes effect if ICLR 2027 accepts the workshop (decisions expected November 29, 2026).
                 </p>
                 <p>
-                    We invite submissions on how AI discovery systems can generate new, independently verifiable scientific knowledge and improve their ability to discover it. The call will prioritize ongoing or novel research, including methods, theory, new experiments, replication, negative results, and well-supported perspectives. We welcome submissions from representation learning, generative modeling, RL, and agent researchers; materials scientists, chemists, mathematicians, and physicists; laboratory automation practitioners; and researchers studying scientific evaluation and responsible AI.
+                    We invite submissions on the workshop&rsquo;s two testable questions: comparative capability at matched resources and recursive improvement under fixed external evaluation. The call will prioritize ongoing or novel research, including methods, theory, new experiments, replication, negative results, and well-supported perspectives. We welcome contributions from representation and generative-model researchers; RL, active-learning, and agent researchers; reliability, formal-methods, and evaluation researchers; domain scientists and laboratory practitioners; optimization and theory researchers; and junior and under-resourced researchers. Participants can contribute to one methodological component and gain feedback from complementary communities; a complete autonomous laboratory or end-to-end discovery system is not required.
                 </p>
 
                 <!-- Key Dates -->
@@ -292,85 +299,34 @@
                 <!-- Scope -->
                 <div id="scope" class="mt-8">
                     <h3 class="text-2xl font-bold text-[#2c5282] border-b-2 border-blue-200 pb-2 mb-4">Scope</h3>
-                    <h4 class="text-xl font-semibold text-[#2c5282]">One discovery loop, multiple forms of evidence</h4>
-                    <p class="sr-only">Represent, then Propose, then Test, then Verify, then Revise, and repeat.</p>
-                    <div class="flex flex-wrap items-center justify-center gap-2 my-6 text-base font-semibold" aria-hidden="true">
-                        <span class="inline-flex items-center gap-2 whitespace-nowrap"><span class="px-4 py-1.5 rounded-full bg-sky-100 text-sky-900">Represent</span><span class="text-gray-400">&rarr;</span></span>
-                        <span class="inline-flex items-center gap-2 whitespace-nowrap"><span class="px-4 py-1.5 rounded-full bg-blue-100 text-blue-900">Propose</span><span class="text-gray-400">&rarr;</span></span>
-                        <span class="inline-flex items-center gap-2 whitespace-nowrap"><span class="px-4 py-1.5 rounded-full bg-amber-100 text-amber-900">Test</span><span class="text-gray-400">&rarr;</span></span>
-                        <span class="inline-flex items-center gap-2 whitespace-nowrap"><span class="px-4 py-1.5 rounded-full bg-teal-100 text-teal-900">Verify</span><span class="text-gray-400">&rarr;</span></span>
-                        <span class="inline-flex items-center gap-2 whitespace-nowrap"><span class="px-4 py-1.5 rounded-full bg-violet-100 text-violet-900">Revise</span><span class="text-gray-400 text-xl leading-none">&#8634;</span></span>
-                    </div>
-                    <p class="mb-6">
-                        The feedback loop can update a hypothesis, model, representation, experimental protocol, or research tool. Scientific progress depends on whether those updates improve knowledge under a credible validation process. We invite the following applications when they address at least one shared methodological question (see <a href="#introduction" class="text-blue-600 underline hover:text-blue-800">Key Questions</a>):
+                    <p>
+                        <span class="font-semibold">Scope criterion.</span> Submissions should inform either <a href="#pillars" class="text-blue-600 underline hover:text-blue-800">comparative capability at matched resources or recursive improvement under fixed external evaluation</a>. Contributions on representations, scientific-feedback learning, and evaluators are welcome when they advance one of these questions, with evidence appropriate to their stated scope. Individual components are welcome; short papers need not implement an end-to-end system.
                     </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 hyphens-manual">
+                    <h4 class="text-xl font-semibold text-[#2c5282] mt-8">Scientific domains as evaluation environments</h4>
+                    <p class="mb-6">
+                        The seven scientific areas (AI4Sci, AI4Mat, AI4Chem, AI4Math, AI4Physics, AI4AI, and self-driving laboratories) are shared test settings rather than separate tracks. They are organized into three validation environments:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 hyphens-manual">
                         <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">AI for Science <span class="text-base font-medium text-gray-500">(AI4Sci)</span></h4>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                                <li>Scientific foundation models</li>
-                                <li>Multimodal evidence</li>
-                                <li>Hypothesis generation and cross-domain transfer</li>
-                            </ul>
-                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Discovery and validation question:</span> <em>What transfers across domains, and what requires domain-specific structure or measurement?</em></p>
+                            <h5 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">Physical Experiments</h5>
+                            <p class="text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Representative tasks:</span> Materials and catalyst selection; synthesis; device fabrication; laboratory planning.</p>
+                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Independent evidence:</span> Controls, repeat preparation, calibration, uncertainty, and independent measurement or replication.</p>
                         </div>
                         <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">AI for Materials <span class="text-base font-medium text-gray-500">(AI4Mat)</span></h4>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                                <li>Inverse design</li>
-                                <li>Synthesis-aware generation</li>
-                                <li>Hierarchical materials and structure&ndash;property relations</li>
-                            </ul>
-                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Discovery and validation question:</span> <em>Do proposed designs retain their properties under independent simulation, fabrication, and characterization?</em></p>
+                            <h5 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">Formal Proof</h5>
+                            <p class="text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Representative tasks:</span> Conjecture evaluation, formalization, proof search, and verified algorithmic claims.</p>
+                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Independent evidence:</span> Precise statements and assumptions, trusted proof checking, and inspection of statement fidelity.</p>
                         </div>
                         <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">AI for Chemistry <span class="text-base font-medium text-gray-500">(AI4Chem)</span></h4>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                                <li>Reaction and catalyst discovery</li>
-                                <li>Molecular design</li>
-                                <li>Synthesis planning and mechanism inference</li>
-                            </ul>
-                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Discovery and validation question:</span> <em>Can a system propose executable protocols and learn from failures, controls, and repeat measurements?</em></p>
-                        </div>
-                        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">AI for Mathematics <span class="text-base font-medium text-gray-500">(AI4Math)</span></h4>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                                <li>Conjecture generation</li>
-                                <li>Proof search</li>
-                                <li>Formalization and algorithm discovery</li>
-                            </ul>
-                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Discovery and validation question:</span> <em>Are claims checked by an appropriate proof system or independently verified computation?</em></p>
-                        </div>
-                        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">AI for Physics <span class="text-base font-medium text-gray-500">(AI4Physics)</span></h4>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                                <li>Scientific simulators</li>
-                                <li>Equation discovery</li>
-                                <li>Inverse problems</li>
-                                <li>Experimental control</li>
-                            </ul>
-                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Discovery and validation question:</span> <em>Do results respect physical constraints and survive tests beyond the training regime?</em></p>
-                        </div>
-                        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">AI for AI Research <span class="text-base font-medium text-gray-500">(AI4AI)</span></h4>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                                <li>Automated ML research</li>
-                                <li>Architecture and optimizer discovery</li>
-                                <li>Research-tool improvement</li>
-                            </ul>
-                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Discovery and validation question:</span> <em>Do improvements survive held-out evaluations, ablations, and matched compute budgets?</em></p>
-                        </div>
-                        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300 md:col-span-2">
-                            <h4 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">Self-Driving Labs</h4>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                                <li>Active experimental design</li>
-                                <li>Robotics</li>
-                                <li>Instrument APIs</li>
-                                <li>Scheduling and sim-to-real transfer</li>
-                            </ul>
-                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Discovery and validation question:</span> <em>Can planning, execution, measurement, and recovery form an auditable, reproducible loop?</em></p>
+                            <h5 class="text-xl font-semibold text-[#2c5282] border-b border-blue-400 pb-2 mb-3">Computational/AI Research</h5>
+                            <p class="text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Representative tasks:</span> Equation discovery, scientific simulators, architecture or optimizer design, and research-tool updates.</p>
+                            <p class="mt-3 text-base text-gray-700"><span class="font-semibold text-[#2c5282]">Independent evidence:</span> Locked tests, held-out tasks, reproducible execution, ablations, and matched tuning and compute.</p>
                         </div>
                     </div>
+                    <h4 class="text-xl font-semibold text-[#2c5282] mt-8">Primary output and advances sought</h4>
+                    <p>
+                        The reporting template will require task and claim, expert and algorithmic baselines, available information, resource envelope, human intervention, failure history, update mechanism, fixed external checks, uncertainty, and transfer scope. Three worked cases will identify what each comparison supports and what decisive evidence remains missing. We will annotate autonomy using established self-driving-laboratory and AGI frameworks and the autonomy spectrum discussed at ICML 2026&rsquo;s AI for Science workshop, connecting the claimed level to required evidence rather than creating another autonomy vocabulary. Short contributions may advance one field or component; full autonomous workflows and claims of expert superiority are not prerequisites for participation.
+                    </p>
                 </div>
 
                 <!-- Submission Guidelines -->
@@ -401,13 +357,13 @@
                     <p class="ml-4">Both tracks will use the official <a href="https://github.com/ICLR/Master-Template/tree/master/iclr2027" class="text-blue-600 hover:text-blue-800 underline">ICLR 2027 LaTeX template</a> and anonymous review. Include references and supplementary material in the same PDF. Please change the template&rsquo;s running header, which refers to the main conference, to refer to the workshop (e.g., &ldquo;Under review at the SSI Workshop at ICLR 2027&rdquo;). Submissions that alter the ICLR style (e.g., by decreasing margins or font sizes) or exceed the page limits may be rejected without review.</p>
 
                     <h4 class="font-bold mt-4">Review process:</h4>
-                    <p class="ml-4">Every submission will receive at least two human reviews, with a third review or independent adjudication where needed. Reviewers will assess scientific relevance, soundness, clarity of claims, adequacy of validation, novelty relative to disclosed prior work, and value for discussion. Short papers will be judged against their stated scope.</p>
+                    <p class="ml-4">Every submission will receive at least two human reviews, with a third review or independent adjudication where needed. Reviewers will assess scientific relevance, soundness, clarity of claims, adequacy of validation, novelty relative to disclosed prior work, and value for discussion. Short papers will be judged against their stated scope. Final selection will depend on quality and discussion value.</p>
 
                     <h4 class="font-bold mt-4">Evidence expectations:</h4>
-                    <p class="ml-4">Wet-lab access and large compute budgets will not be prerequisites: a careful analysis, formal result, or openly reproducible small-scale study can make a strong contribution. For empirical discovery claims we will request appropriate baselines, uncertainty, provenance, resource costs, and the extent of human intervention. Artifacts will be encouraged where release is feasible. We will encourage release of unsuccessful trials and limitations to make selective reporting visible. Work involving experiments should describe relevant oversight and operating constraints.</p>
+                    <p class="ml-4">Wet-lab access and large compute budgets will not be prerequisites: a careful analysis, formal result, or openly reproducible small-scale study can make a strong contribution. For empirical discovery claims we will request appropriate baselines, uncertainty, provenance, resource costs, and the extent of human intervention. Artifacts will be encouraged where release is feasible. Domain experts will assess scientific validity separately from claims made by an agent or its internal scoring model. We will encourage release of unsuccessful trials and limitations to make selective reporting visible. Work involving experiments should describe relevant oversight and operating constraints. Discussion of autonomy will include human accountability, misuse risks, laboratory safety, and the ability to audit or interrupt a system, proportionate to the work presented.</p>
 
                     <h4 class="font-bold mt-4">Prior work and non-archival policy:</h4>
-                    <p class="ml-4">Previously published work may provide context, but a submission must clearly identify new content; the workshop will not primarily re-present papers from the ICLR main track or other ML conferences. Acceptance will not constitute an archival proceedings publication. Accepted papers will remain publicly accessible on OpenReview and be listed on the workshop website. Authors must check the policies of any concurrent venue.</p>
+                    <p class="ml-4">Previously published work may provide context, but a submission must clearly identify new content; the workshop will not primarily re-present papers from the ICLR main track or other ML conferences. Acceptance will not constitute an archival proceedings publication. Accepted papers will remain publicly accessible on OpenReview and be listed on the workshop website. Authors must check the policies of any concurrent venue. We will publish session and talk titles before the conference program is finalized so attendees can choose sessions by content.</p>
 
                     <h4 class="font-bold mt-4">Visibility:</h4>
                     <p class="ml-4">Submissions and reviews will not be public. Only accepted papers will be made public on OpenReview.</p>
@@ -426,14 +382,13 @@
                     <p class="ml-4">ICLR 2027 workshops are held in person. All accepted contributions receive a poster slot; six receive orals and ten receive lightning slots. Selections will cover domains, methods, and career stages, with at least two lightning slots reserved for tiny/short papers, subject to suitable submissions. For exceptional visa or other constraints, we will offer a poster proxy and a short prerecorded presentation on the website.</p>
 
                     <h4 class="font-bold mt-4">Evidence clinic:</h4>
-                    <p class="ml-4">Authors will volunteer a brief claim, supporting evidence, and an unresolved failure mode. An ML researcher and a domain scientist will help the audience design a falsification or replication test. This is a discussion of submitted evidence, not a live laboratory experiment.</p>
+                    <p class="ml-4">Before the workshop, we will select three volunteered cases: a physical experiment, a formal proof, and a computational or AI research experiment. Each author will prepare a task, expert or static-system baseline, update history, resource envelope, independent check, and unresolved failure mode. For each 15-minute case, five minutes of presentation will be followed by ten minutes of audience discussion with a method researcher and a domain or validation expert. Cases will use the same core reporting fields while keeping environment-specific checks. No live laboratory experiment is required.</p>
 
                     <h4 class="font-bold mt-4">Online access:</h4>
-                    <p class="ml-4">Accepted papers, optional posters, captioned prerecorded videos, and discussion notes will be available online. An asynchronous question form will support contributions from those unable to attend. We will request permission and conference support to record invited talks; if recording is unavailable, we will publish consenting speakers&rsquo; slides and written summaries.</p>
+                    <p class="ml-4">Accepted papers, optional posters, captioned prerecorded videos, and discussion notes will be available online. An asynchronous question form will support contributions from those unable to attend. We will request permission and conference support to record invited talks; if recording is unavailable, we will publish consenting speakers&rsquo; slides and written summaries. The access plan does not depend on live streaming or a hybrid event.</p>
 
                     <h4 class="font-bold mt-4">Contact:</h4>
-                    <!-- TODO: replace with the workshop's contact email -->
-                    <p class="ml-4">For any questions, please contact us at <a href="mailto:ssi.iclr2027@example.com" class="underline font-medium">ssi.iclr2027@example.com</a>.</p>
+                    <p class="ml-4">For any questions, please contact the primary contact, Ricky Renjie Li, at <a href="mailto:renjie2@illinois.edu" class="underline font-medium">renjie2@illinois.edu</a>.</p>
                 </div>
             </div>
         </div>
@@ -477,7 +432,7 @@
                 </summary>
                 <div class="text-gray-700 mt-4 text-center">
                     <p class="mb-2">The program committee will be announced soon.</p>
-                    <p class="text-sm text-gray-500">Interested in reviewing for SSI@ICLR2027? We especially welcome reviewers from the natural sciences and mathematics. Please email us at <a href="mailto:ssi.iclr2027@example.com" class="underline font-medium">ssi.iclr2027@example.com</a>.</p>
+                    <p class="text-sm text-gray-500">Interested in reviewing for SSI@ICLR2027? We especially welcome reviewers from the natural sciences and mathematics. Please email us at <a href="mailto:renjie2@illinois.edu" class="underline font-medium">renjie2@illinois.edu</a>.</p>
                     <!--
                     Program committee template:
                     <p class="mb-2">We thank the following colleagues for their valuable service as program committee members and reviewers.</p>
@@ -497,12 +452,12 @@
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">Schedule</h2>
             <div class="max-w-2xl mx-auto text-center p-8 bg-gray-50 border border-dashed border-gray-300 rounded-xl">
                 <p class="text-lg font-semibold text-gray-700">To Be Announced</p>
-                <p class="mt-2 text-gray-500">The detailed schedule will be posted closer to the workshop. The workshop will be a single-day, single-track, in-person event with four invited talks, two contributed oral sessions, a poster lightning session including tiny/short papers, two poster sessions, an evidence clinic, a panel, and cross-domain working groups.</p>
+                <p class="mt-2 text-gray-500">The detailed schedule will be posted closer to the workshop. The one-day, single-track program combines invited talks with contributed research, an evidence clinic, and structured discussion: five invited talks, two contributed oral sessions, a poster lightning session including tiny/short papers, two poster sessions, two focused panels, and cross-domain working groups.</p>
             </div>
 
             <!--
             Schedule table template from the proposal (section 2). Restore it and remove the placeholder above when the program is final.
-            <p class="text-center text-gray-500 italic mb-8">This is the tentative schedule of the workshop. All times are in local time (PDT).</p>
+            <p class="text-center text-gray-500 italic mb-8">This is the tentative schedule of the workshop. All times are local conference time.</p>
             <div class="overflow-x-auto rounded-lg shadow-lg">
                 <table class="min-w-full divide-y divide-gray-200">
                     <tbody class="bg-white divide-y divide-gray-200">
@@ -511,20 +466,20 @@
                             <td class="px-4 sm:px-6 py-4 text-gray-700">Organizer introduction: scope, definitions, and questions for the day.</td>
                         </tr>
                         <tr>
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">09:10 – 09:40</td>
-                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited talk 1: Representations and agents for scientific discovery (20 min + 10 min discussion).</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">09:10 – 09:35</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited talk 1: Wei Zhou, Virginia Tech (20 min + 5 min discussion).</td>
                         </tr>
                         <tr>
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">09:40 – 10:10</td>
-                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited talk 2: Closing the loop in materials, chemistry, and self-driving labs (20 + 10 min).</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">09:35 – 10:00</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited talk 2: Guannan Zhang, ORNL (20 + 5 min).</td>
                         </tr>
                         <tr>
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">10:10 – 10:40</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">10:00 – 10:30</td>
                             <td class="px-4 sm:px-6 py-4 text-gray-700">Contributed oral session I: three talks (7 min + 3 min questions each).</td>
                         </tr>
                         <tr class="bg-blue-100">
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-blue-800 w-1/4">10:40 – 11:10</td>
-                            <td class="px-4 sm:px-6 py-4 text-blue-800 font-semibold">Coffee break and poster session I.</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-blue-800 w-1/4">10:30 – 11:10</td>
+                            <td class="px-4 sm:px-6 py-4 text-blue-800 font-semibold">Coffee break and poster session I (40 min).</td>
                         </tr>
                         <tr>
                             <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">11:10 – 11:30</td>
@@ -532,35 +487,39 @@
                         </tr>
                         <tr class="bg-amber-50">
                             <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-amber-800 w-1/4">11:30 – 12:15</td>
-                            <td class="px-4 sm:px-6 py-4 text-amber-800 font-semibold">Evidence clinic: examine three discovery claims and design their decisive tests.</td>
+                            <td class="px-4 sm:px-6 py-4 text-amber-800 font-semibold">Evidence clinic: compare capability claims and complete the reporting template.</td>
                         </tr>
                         <tr class="bg-blue-50">
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-blue-800 w-1/4">12:15 – 13:30</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-blue-800 w-1/4">12:15 – 13:00</td>
                             <td class="px-4 sm:px-6 py-4 text-blue-800 font-semibold">Lunch and unstructured exchange.</td>
                         </tr>
                         <tr>
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">13:30 – 14:00</td>
-                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited talk 3: Mathematical reasoning, proof, and scientific verification (20 + 10 min).</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">13:00 – 13:25</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited talk 3: Haotian Zhang, NVIDIA Cosmos Lab (20 + 5 min).</td>
                         </tr>
                         <tr>
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">14:00 – 14:30</td>
-                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited talk 4: AI4AI and recursive improvement of research tools (20 + 10 min).</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">13:25 – 13:50</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited talk 4: Jian Tang, HEC Montr&eacute;al and Mila (20 + 5 min).</td>
                         </tr>
                         <tr>
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">14:30 – 15:00</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">13:50 – 14:15</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Invited talk 5: Shuchao Bi, Meta Superintelligence Labs (20 + 5 min).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">14:15 – 14:45</td>
                             <td class="px-4 sm:px-6 py-4 text-gray-700">Contributed oral session II: three talks (7 + 3 min each).</td>
                         </tr>
                         <tr class="bg-blue-100">
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-blue-800 w-1/4">15:00 – 15:30</td>
-                            <td class="px-4 sm:px-6 py-4 text-blue-800 font-semibold">Coffee break and poster session II.</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-blue-800 w-1/4">14:45 – 15:25</td>
+                            <td class="px-4 sm:px-6 py-4 text-blue-800 font-semibold">Coffee break and poster session II (40 min).</td>
                         </tr>
                         <tr class="bg-amber-50">
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-amber-800 w-1/4">15:30 – 16:15</td>
-                            <td class="px-4 sm:px-6 py-4 text-amber-800 font-semibold">Panel: What evidence would justify scientific superintelligence?</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-amber-800 w-1/4">15:25 – 16:25</td>
+                            <td class="px-4 sm:px-6 py-4 text-amber-800 font-semibold">Two successive focused panels: expert comparisons; recursive improvement under fixed evaluation (25 + 25 min), followed by joint synthesis (10 min).</td>
                         </tr>
                         <tr>
-                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">16:15 – 16:50</td>
-                            <td class="px-4 sm:px-6 py-4 text-gray-700">Cross-domain working groups: draft benchmark concepts and evidence requirements.</td>
+                            <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">16:25 – 16:50</td>
+                            <td class="px-4 sm:px-6 py-4 text-gray-700">Cross-domain working groups: refine comparison protocols and the template&rsquo;s three worked examples.</td>
                         </tr>
                         <tr>
                             <td class="px-4 sm:px-6 py-4 whitespace-nowrap font-medium text-gray-900 w-1/4">16:50 – 17:00</td>
@@ -577,7 +536,7 @@
     <section id="speaker" class="section-container py-12">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-3">Invited Speakers</h2>
-            <p class="text-center text-gray-500 italic mb-10 text-balance">Talk titles will be announced soon.</p>
+            <p class="text-center text-gray-600 mb-10 text-balance max-w-3xl mx-auto">The invited program brings together academic, national-laboratory, and industry perspectives on scientific AI. <span class="italic text-gray-500">Talk titles will be announced soon.</span></p>
 
             <!--
             To add a speaker: put a square photo in images/Speakers/ and replace one placeholder card below.
@@ -589,7 +548,7 @@
                 <p class="text-sm text-gray-500">Affiliation</p>
             </div>
             -->
-            <div class="person-grid person-flex max-w-5xl mx-auto">
+            <div class="person-grid person-flex speakers-5 max-w-6xl mx-auto">
                 <!-- Speaker 1 -->
                 <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
@@ -606,13 +565,19 @@
                 <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
                     <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Haotian Zhang</h3>
-                    <p class="text-sm text-gray-500">Senior Research Scientist<br>NVIDIA</p>
+                    <p class="text-sm text-gray-500">Senior Research Scientist<br>NVIDIA Cosmos Lab</p>
                 </div>
                 <!-- Speaker 4 -->
                 <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
                     <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
                     <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Jian Tang</h3>
-                    <p class="text-sm text-gray-500">HEC Montr&eacute;al &amp; Mila</p>
+                    <p class="text-sm text-gray-500">Associate Professor<br>HEC Montr&eacute;al and Mila</p>
+                </div>
+                <!-- Speaker 5 -->
+                <div class="flex flex-col items-center px-1 py-4 sm:p-4 text-center">
+                    <img src="images/Basic/avatar-placeholder.svg" alt="" width="144" height="144" class="w-36 h-auto aspect-square rounded-full object-cover mb-3 ring-1 ring-gray-300" loading="lazy">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Shuchao Bi</h3>
+                    <p class="text-sm text-gray-500">Research Scientist<br>Meta Superintelligence Labs</p>
                 </div>
             </div>
         </div>
@@ -622,7 +587,7 @@
     <section id="panelists" class="section-container py-12 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-3">Panelists</h2>
-            <p class="text-center text-gray-600 mb-10 text-balance">The panel will address <em>What evidence would justify scientific superintelligence?</em> The proposed panelist roster is:</p>
+            <p class="text-center text-gray-600 mb-10 text-balance">The two panels will address <em>When does AI outperform expert scientists?</em> and <em>How can we establish that an updated system discovers better?</em> The proposed panelist roster is:</p>
 
             <!--
             To add a panelist: put a square photo in images/Panelists/ and replace one placeholder card below.
@@ -779,7 +744,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-6">Sponsors</h2>
             <p class="text-center text-gray-600 max-w-2xl mx-auto">
-                Interested in supporting SSI@ICLR2027? Any secured sponsorship will prioritize participation support for under-resourced contributors using transparent criteria; the core program will operate without sponsorship. Please reach out to us at <a href="mailto:ssi.iclr2027@example.com" class="underline font-medium text-[#2c5282]">ssi.iclr2027@example.com</a>.
+                Interested in supporting SSI@ICLR2027? The program requires no sponsor funding; any secured participation support will use transparent criteria. Please reach out to us at <a href="mailto:renjie2@illinois.edu" class="underline font-medium text-[#2c5282]">renjie2@illinois.edu</a>.
             </p>
             <!--
             Sponsor card template:
