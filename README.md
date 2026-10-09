@@ -37,7 +37,7 @@ Then open <http://localhost:8027>.
 | Organizers | `<section id="organization">`, one card per person (max. 8 for ICLR 2027, advisors and student volunteers included) |
 | Schedule | `<section id="program">`: currently a "To Be Announced" placeholder; a full-day table template is kept in an HTML comment right below it |
 | Accepted papers / PC | `<section id="accepted-papers">`, `<section id="program-committee">` |
-| Contact email | search for `ssi.iclr2027@example.com` |
+| Contact | primary contact Ricky Renjie Li (`renjie2@illinois.edu`): CFP > Contact, Program Committee, Sponsors |
 
 Photos: put the file in `images/Speakers/`, `images/Panelists/` or `images/Organizers/` and point the card's `<img src>` to it.
 GitHub Pages paths are case-sensitive, so prefer lowercase file names such as `jane-doe.jpg`.
