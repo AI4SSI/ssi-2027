@@ -14,6 +14,7 @@ images/Basic/hero.svg       # header background
 images/Basic/avatar-placeholder.svg
 images/Speakers/            # speaker photos (square, ≥ 300×300 px recommended)
 images/Organizers/          # organizer photos
+images/Sponsors/            # sponsor logos
 images/Panelists/           # panelist photos
 .nojekyll                   # serve files as-is on GitHub Pages
 ```
@@ -37,6 +38,7 @@ Then open <http://localhost:8027>.
 | Organizers | `<section id="organization">`, one card per person (max. 8 for ICLR 2027, advisors and student volunteers included) |
 | Schedule | `<section id="program">`: currently a "To Be Announced" placeholder; a full-day table template is kept in an HTML comment right below it |
 | Accepted papers / PC | `<section id="accepted-papers">`, `<section id="program-committee">` |
+| Sponsors | `<section id="sponsor">`; logos in `images/Sponsors/` (wrap a logo in `<a>` only if the sponsor has a website) |
 | Contact | primary contact Ricky Renjie Li (`renjie2@illinois.edu`): CFP > Contact, Program Committee, Sponsors |
 
 Photos: put the file in `images/Speakers/`, `images/Panelists/` or `images/Organizers/` and point the card's `<img src>` to it.
